@@ -147,6 +147,7 @@ let g:OmniSharp_diagnostic_overrides = {
 \ 'CS8019': {'type': 'None'},
 \ 'RemoveUnnecessaryImportsFixable': {'type': 'None'}
 \}
+let g:OmniSharp_server_use_net6 = 1
 
 nnoremap <C-o><C-u> :OmniSharpFindUsages<CR>
 nnoremap <C-o><C-d> :OmniSharpGotoDefinition<CR>
