@@ -64,19 +64,6 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<tab>"
 
-" Coc
-let g:coc_global_extensions = [ 
-			\'coc-rls',
-			\'coc-emmet', 
-			\'coc-css', 
-			\'coc-html', 
-			\'coc-json', 
-			\'coc-prettier', 
-			\'coc-tsserver',
-			\'coc-vetur',
-			\'coc-python',
-			\]
-
 " Move
 let g:move_key_modifier = 'C'
 
@@ -97,7 +84,7 @@ set concealcursor=n
 
 " Rainbow
 let g:rainbow#max_level = 16
-let g:rainbow#pairs = [['(', ')'], ['{', '}'], ['[', ']']]
+let g:rainbow#pairs = [['(', ')'], ['{', '}'], ['[', ']'], ]
 autocmd FileType javascript syntax clear jsFuncBlock
 augroup rainbow_lisp
   autocmd!
@@ -136,7 +123,7 @@ let g:mkdp_page_title = '!wku - 「${name}」'
 let g:mkdp_markdown_css = '../services/markdown.css'
 
 
-let g:indentLine_concealcursor = ''
+let g:indentLine_concealcursor = '-'
 
 " C#
 let g:OmniSharp_highlighting = 3
