@@ -64,6 +64,20 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<tab>"
 
+" Coc
+let g:coc_global_extensions = [ 
+			\'coc-rls',
+			\'coc-emmet', 
+			\'coc-css', 
+			\'coc-html', 
+			\'coc-json', 
+			\'coc-prettier', 
+			\'coc-tsserver',
+			\'coc-vetur',
+			\'coc-python',
+			\'coc-graphql',
+			\]
+
 " Move
 let g:move_key_modifier = 'C'
 
@@ -134,6 +148,7 @@ let g:OmniSharp_diagnostic_overrides = {
 \ 'CS8019': {'type': 'None'},
 \ 'RemoveUnnecessaryImportsFixable': {'type': 'None'}
 \}
+let g:OmniSharp_server_use_net6 = 1
 
 nnoremap <C-o><C-u> :OmniSharpFindUsages<CR>
 nnoremap <C-o><C-d> :OmniSharpGotoDefinition<CR>
