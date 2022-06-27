@@ -92,6 +92,10 @@ Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'jparise/vim-graphql'        " GraphQL syntax
 
+" For Rust lang
+Plug 'rust-lang/rust.vim'
+Plug 'dense-analysis/ale'
+
 " ============== End ============== "
 
 " Icon (away last one)

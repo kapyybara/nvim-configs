@@ -64,20 +64,6 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<tab>"
 
-" Coc
-let g:coc_global_extensions = [ 
-			\'coc-rls',
-			\'coc-emmet', 
-			\'coc-css', 
-			\'coc-html', 
-			\'coc-json', 
-			\'coc-prettier', 
-			\'coc-tsserver',
-			\'coc-vetur',
-			\'coc-python',
-			\'coc-graphql',
-			\]
-
 " Move
 let g:move_key_modifier = 'C'
 
@@ -156,3 +142,9 @@ nnoremap <C-o><C-d><C-p> :OmniSharpPreviewDefinition<CR>
 nnoremap <C-o><C-r> :!dotnet run
 
 autocmd BufWritePost *.cs :OmniSharpCodeFormat
+
+" For Rust lang
+let g:rustfmt_autosave = 1
+let g:rustfmt_emit_files = 1
+let g:rustfmt_fail_silently = 0
+

@@ -1,3 +1,9 @@
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
 let g:coc_global_extensions = [ 
 			\'coc-rls',
 			\'coc-emmet', 
@@ -8,6 +14,8 @@ let g:coc_global_extensions = [
 			\'coc-tsserver',
 			\'coc-vetur',
 			\'coc-python',
+			\'coc-graphql',
+			\'coc-rust-analyzer',
 			\]
 
 " Remap keys for applying codeAction to the current line.
