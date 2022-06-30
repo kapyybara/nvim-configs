@@ -29,6 +29,9 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" Scroll help coc windoow
+
+
 set updatetime=300
 
 " This makes it so that you can click a variable and a float window pops up
@@ -51,3 +54,4 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 "To configure rootPatterns for specified filetype
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
+
