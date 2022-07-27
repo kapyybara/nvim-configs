@@ -96,6 +96,11 @@ Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'rust-lang/rust.vim'
 Plug 'dense-analysis/ale'
 
+" Setup nvim for deno
+Plug 'junnplus/nvim-lsp-setup'
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
+
 " ============== End ============== "
 
 " Icon (away last one)

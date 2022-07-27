@@ -1,7 +1,7 @@
 filetype plugin on
 filetype plugin indent on
 
-autocmd BufEnter * :set scroll=10
+autocmd BufEnter * :set scroll=5
 syntax on
 
 set encoding=UTF-8
@@ -64,4 +64,4 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 autocmd Filetype cs setlocal shiftwidth=4 softtabstop=4
 
 " Toggle terminal
-nnoremap <silent> <leader>tm :below 10sp term://pwsh <CR>
+nnoremap <silent> <leader>tm :below 5sp term://pwsh <CR>

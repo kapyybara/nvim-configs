@@ -14,9 +14,10 @@ let g:coc_global_extensions = [
 			\'coc-tsserver',
 			\'coc-vetur',
 			\'coc-python',
-			\'coc-graphql',
 			\'coc-rust-analyzer',
 			\]
+"			\'coc-graphql',
+
 
 " Remap keys for applying codeAction to the current line.
 nmap <leader>ac  <Plug>(coc-codeaction)
@@ -29,13 +30,24 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Scroll help coc windoow
-
-
 set updatetime=300
 
 " This makes it so that you can click a variable and a float window pops up
 nnoremap <silent> <leader>h :call CocActionAsync('doHover')<cr>
+
+" Auto hover
+function! ShowDocIfNoDiagnostic(timer_id)
+  if (coc#float#has_float() == 0 && CocHasProvider('hover') == 1)
+    silent call CocActionAsync('doHover')
+  endif
+endfunction
+
+function! s:show_hover_doc()
+  call timer_start(2500, 'ShowDocIfNoDiagnostic')
+endfunction
+
+autocmd CursorHoldI * :call <SID>show_hover_doc()
+autocmd CursorHold * :call <SID>show_hover_doc()
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :

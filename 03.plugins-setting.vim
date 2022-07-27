@@ -71,7 +71,7 @@ let g:move_key_modifier = 'C'
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
 let g:javascript_plugin_ngdoc = 1
-let g:javascript_conceal_function             = "ƒ"
+" let g:javascript_conceal_function             = "ƒ"
 let g:javascript_conceal_null                 = "ø"
 let g:javascript_conceal_this                 = "@"
 let g:javascript_conceal_undefined            = "¿"
@@ -147,4 +147,6 @@ autocmd BufWritePost *.cs :OmniSharpCodeFormat
 let g:rustfmt_autosave = 1
 let g:rustfmt_emit_files = 1
 let g:rustfmt_fail_silently = 0
+
+
 
