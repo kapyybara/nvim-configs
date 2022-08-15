@@ -37,8 +37,8 @@ let g:fzf_action = {
   \}
 
 "auto close brackets
-inoremap " ""<left>
 inoremap ' ''<left>
+inoremap " ""<left>
 inoremap ` ``<left>
 inoremap ( ()<left>
 inoremap [ []<left>
