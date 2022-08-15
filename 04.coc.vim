@@ -36,18 +36,18 @@ set updatetime=300
 nnoremap <silent> <leader>h :call CocActionAsync('doHover')<cr>
 
 " Auto hover
-function! ShowDocIfNoDiagnostic(timer_id)
-  if (coc#float#has_float() == 0 && CocHasProvider('hover') == 1)
-    silent call CocActionAsync('doHover')
-  endif
-endfunction
+"function! ShowDocIfNoDiagnostic(timer_id)
+"  if (coc#float#has_float() == 0 && CocHasProvider('hover') == 1)
+"    silent call CocActionAsync('doHover')
+"  endif
+"endfunction
+"
+"function! s:show_hover_doc()
+"  call timer_start(2500, 'ShowDocIfNoDiagnostic')
+"endfunction
 
-function! s:show_hover_doc()
-  call timer_start(2500, 'ShowDocIfNoDiagnostic')
-endfunction
-
-autocmd CursorHoldI * :call <SID>show_hover_doc()
-autocmd CursorHold * :call <SID>show_hover_doc()
+"autocmd CursorHoldI * :call <SID>show_hover_doc()
+"autocmd CursorHold * :call <SID>show_hover_doc()
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
