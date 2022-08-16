@@ -65,3 +65,6 @@ autocmd Filetype cs setlocal shiftwidth=4 softtabstop=4
 
 " Toggle terminal
 nnoremap <silent> <leader>tm :below 5sp term://pwsh <CR>
+
+
+

@@ -100,6 +100,10 @@ Plug 'dense-analysis/ale'
 Plug 'junnplus/nvim-lsp-setup'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
+Plug 'autozimu/LanguageClient-neovim', {
+\ 'branch': 'next',
+\ 'do': 'bash install.sh',
+\ }
 
 " ============== End ============== "
 
