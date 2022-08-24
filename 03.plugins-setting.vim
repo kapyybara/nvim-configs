@@ -43,9 +43,9 @@ if (has("termguicolors"))
  set termguicolors
 endif
 syntax enable
-colorscheme nord 
+colorscheme onedark 
 let g:lightline = {
-  \ 'colorscheme': 'nord',
+  \ 'colorscheme': 'onedark',
   \ }
 :hi normal guibg=000000
 
