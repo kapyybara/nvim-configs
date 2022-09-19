@@ -14,8 +14,8 @@ let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
 let g:NERDTreeChDirMode=2
 let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__', 'node_modules']
 let g:NERDTreeShowBookmarks=1
-let g:NERDTreeDirArrowExpandable = '⮞'
-let g:NERDTreeDirArrowCollapsible = '⮟'
+"let g:NERDTreeDirArrowExpandable = '>'
+"let g:NERDTreeDirArrowCollapsible = 'v'
 let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
 let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 " Auto close
@@ -26,7 +26,7 @@ if exists("g:loaded_webdevicons")
 endif
 
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'✏',
+                \ 'Modified'  :'✏️',
                 \ 'Staged'    :'✚',
                 \ 'Untracked' :'✭',
                 \ 'Renamed'   :'➜',
@@ -43,7 +43,7 @@ if (has("termguicolors"))
  set termguicolors
 endif
 syntax enable
-colorscheme onedark 
+colorscheme nord  
 let g:lightline = {
   \ 'colorscheme': 'onedark',
   \ }
@@ -59,6 +59,27 @@ let g:fzf_action = {
   \}
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
+
+nmap <Leader>f [fzf-p]
+xmap <Leader>f [fzf-p]
+
+nnoremap <silent> [fzf-p]p     :<C-u>FzfPreviewFromResourcesRpc project_mru git<CR>
+nnoremap <silent> [fzf-p]gs    :<C-u>FzfPreviewGitStatusRpc<CR>
+nnoremap <silent> [fzf-p]ga    :<C-u>FzfPreviewGitActionsRpc<CR>
+nnoremap <silent> [fzf-p]b     :<C-u>FzfPreviewBuffersRpc<CR>
+nnoremap <silent> [fzf-p]B     :<C-u>FzfPreviewAllBuffersRpc<CR>
+nnoremap <silent> [fzf-p]o     :<C-u>FzfPreviewFromResourcesRpc buffer project_mru<CR>
+nnoremap <silent> [fzf-p]<C-o> :<C-u>FzfPreviewJumpsRpc<CR>
+nnoremap <silent> [fzf-p]g;    :<C-u>FzfPreviewChangesRpc<CR>
+nnoremap <silent> [fzf-p]/     :<C-u>FzfPreviewLinesRpc --add-fzf-arg=--no-sort --add-fzf-arg=--query="'"<CR>
+nnoremap <silent> [fzf-p]*     :<C-u>FzfPreviewLinesRpc --add-fzf-arg=--no-sort --add-fzf-arg=--query="'<C-r>=expand('<cword>')<CR>"<CR>
+nnoremap          [fzf-p]gr    :<C-u>FzfPreviewProjectGrepRpc<Space>
+xnoremap          [fzf-p]gr    "sy:FzfPreviewProjectGrepRpc<Space>-F<Space>"<C-r>=substitute(substitute(@s, '\n', '', 'g'), '/', '\\/', 'g')<CR>"
+nnoremap <silent> [fzf-p]t     :<C-u>FzfPreviewBufferTagsRpc<CR>
+nnoremap <silent> [fzf-p]q     :<C-u>FzfPreviewQuickFixRpc<CR>
+nnoremap <silent> [fzf-p]l     :<C-u>FzfPreviewLocationListRpc<CR>
+
+let g:fzf_preview_command = 'batcat --color=always --plain {-1}'
 
 " Snippet
 let g:UltiSnipsEditSplit="vertical"
@@ -95,7 +116,6 @@ let g:rainbow#blacklist = [248, 238]
 " Git Blammer
 let g:blamer_enabled = 1
 let g:blamer_delay = 500 
-let g:blamer_show_in_visual_modes = 1 
 let g:blamer_relative_time = 1
 
 " Git Signify in the left
@@ -151,5 +171,8 @@ let g:LanguageClient_serverCommands = {
 \ 'rust': ['rust-analyzer'],
 \ }
 
-
-
+" MiniMap
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
+let g:minimap_highlight_search = 1
+let g:minimap_git_colors = 1

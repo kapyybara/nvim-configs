@@ -28,14 +28,6 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
-" fzf_action
-nnoremap <C-p> :FZF<CR>
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-x': 'vsplit'
-  \}
-
 "auto close brackets
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -66,5 +58,6 @@ autocmd Filetype cs setlocal shiftwidth=4 softtabstop=4
 " Toggle terminal
 nnoremap <silent> <leader>tm :below 5sp term://pwsh <CR>
 
-
+set shell=/bin/bash
+let $SHELL = "/bin/bash"
 

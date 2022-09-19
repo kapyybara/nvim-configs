@@ -29,9 +29,11 @@ Plug 'matze/vim-move'
 " fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
+
 
 " Blammer git
-Plug 'APZelos/blamer.nvim'
+
 " Snippet
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -97,13 +99,17 @@ Plug 'rust-lang/rust.vim'
 Plug 'dense-analysis/ale'
 
 " Setup nvim for deno
-Plug 'junnplus/nvim-lsp-setup'
-Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
-Plug 'autozimu/LanguageClient-neovim', {
-\ 'branch': 'next',
-\ 'do': 'bash install.sh',
-\ }
+"Plug 'junnplus/nvim-lsp-setup'
+"Plug 'neovim/nvim-lspconfig'
+"Plug 'williamboman/nvim-lsp-installer'
+"Plug 'autozimu/LanguageClient-neovim', {
+"\ 'branch': 'next',
+"\ 'do': 'bash install.sh',
+"\ }
+
+
+" MiniMap for vim
+Plug 'wfxr/minimap.vim'
 
 " ============== End ============== "
 
