@@ -15,7 +15,6 @@ packer.startup(function(use)
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
   }
-  use "rebelot/kanagawa.nvim" -- theme
   use 'kyazdani42/nvim-web-devicons'
   use {
     'nvim-lualine/lualine.nvim',
@@ -68,5 +67,13 @@ packer.startup(function(use)
 
   -- Tienes's addition
   use "kylechui/nvim-surround"
+
+  -- Theme
+  use "rebelot/kanagawa.nvim"
+  use 'folke/tokyonight.nvim'
+  use {
+    "catppuccin/nvim",
+    as = "catppuccin",
+  }
 
 end)

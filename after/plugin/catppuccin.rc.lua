@@ -1,0 +1,9 @@
+--local status, catppuccin = pcall(require, "catppuccin")
+--
+--if (not status) then return end
+--
+--catppuccin.setup {
+--  flavour = "mocha" -- mocha, macchiato, frappe, latte
+--}
+--
+--vim.api.nvim_command "colorscheme catppuccin"
