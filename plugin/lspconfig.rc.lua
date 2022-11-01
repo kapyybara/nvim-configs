@@ -52,6 +52,24 @@ nvim_lsp.sumneko_lua.setup {
 
 nvim_lsp.rust_analyzer.setup {
   on_attach = on_attach,
+  settings = {
+    ["rust-analyzer"] = {
+      imports = {
+        granularity = {
+          group = "module",
+        },
+        prefix = "self",
+      },
+      cargo = {
+        buildScripts = {
+          enable = true,
+        },
+      },
+      procMacro = {
+        enable = true
+      },
+    }
+  },
   cmd = { "rust-analyzer" },
   filetypes = { "rust" },
 }
@@ -75,7 +93,7 @@ nvim_lsp.gopls.setup {
 nvim_lsp.emmet_ls.setup({
   -- on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
+  filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'vue' },
   init_options = {
     html = {
       options = {

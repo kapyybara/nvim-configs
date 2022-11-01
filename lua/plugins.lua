@@ -67,13 +67,11 @@ packer.startup(function(use)
 
   -- Tienes's addition
   use "kylechui/nvim-surround"
+  -- Tree files
+  use 'nvim-tree/nvim-tree.lua'
 
   -- Theme
-  use "rebelot/kanagawa.nvim"
   use 'folke/tokyonight.nvim'
-  use {
-    "catppuccin/nvim",
-    as = "catppuccin",
-  }
+
 
 end)
