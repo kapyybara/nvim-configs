@@ -85,3 +85,34 @@ nvim_lsp.emmet_ls.setup({
     },
   }
 })
+
+nvim_lsp.vuels.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    vetur = {
+      completion = {
+        autoImport = true,
+        useScaffoldSnippets = true
+      },
+      format = {
+        defaultFormatter = {
+          html = "none",
+          js = "prettier",
+          ts = "prettier",
+        }
+      },
+      validation = {
+        template = true,
+        script = true,
+        style = true,
+        templateProps = true,
+        interpolation = true
+      },
+      experimental = {
+        templateInterpolationService = true
+      }
+    }
+  },
+  root_dir = util.root_pattern("header.php", "package.json", "style.css", 'webpack.config.js')
+}
